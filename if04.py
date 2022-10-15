@@ -7,4 +7,13 @@ def main(a,b):
     Returns:
         int: return answer.
     """
-    return
+    if a == b:
+        d = 0
+    else:
+        if a > b:
+            d = a
+        else:
+            d = b
+    return d
+
+print(main(3, 3))
