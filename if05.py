@@ -6,27 +6,19 @@ def main(n):
     Returns:
         int: return answer.
     """
-    max = 0
-    x1 = n % 10
-    max = x1
-    
-    x2 = n // 10 % 10
-    if x2 > x1:
-        max = x2
-
-    x3 = n // 100 % 10
-    if x3 > x2:
-        max = x3
-
-    x4 = n // 1000 % 10
-    if x4 > x3:
-        max = x4
-
-    x5 = n // 10000
-    if x5 > x4:
-        max = x5
-    
-    
-    return max
-
-print(main(98765))
+    a = n // 10000
+    b = (n // 1000) % 10
+    c = (n // 100) % 10
+    s = (n // 10) % 10
+    q = (n % 10)
+    if a > b and a > c and a > s and a > q:
+        d = a
+    elif b > a and b > c and b > s and b > q:
+        d = b
+    elif c > a and c > b and c > s and c > q:
+        d = c
+    elif s > a and s > b and s > c and s > q:
+        d = s
+    elif q > a and q > b and q > c and q > s:
+        d = q
+    return d
