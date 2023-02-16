@@ -17,4 +17,4 @@ def main(a,b,c):
 
     return mx
 
-print(main(3, 5, 1))
+print(main(8, 5, 7))
